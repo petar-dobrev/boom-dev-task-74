@@ -21,9 +21,11 @@ function App() {
           onChange={(e) => setText(e.target.value)}
           value={text}
         />
-        <span className="icon is-small is-right">
-          <i className={inputIsNumber ? "fas fa-check" : "fas fa-times"} />
-        </span>
+        {text && (
+          <span className="icon is-small is-right">
+            <i className={inputIsNumber ? "fas fa-check" : "fas fa-times"} />
+          </span>
+        )}
       </div>
     </div>
   );
